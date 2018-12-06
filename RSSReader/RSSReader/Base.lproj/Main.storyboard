@@ -19,13 +19,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mLN-tO-GMO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Following" image="following" id="pwH-Wn-6mO"/>
+                    <navigationItem key="navigationItem" title="Following" id="FvQ-eT-TbA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Uz-oK-R65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="121"/>
+            <point key="canvasLocation" x="1476" y="120.98950524737631"/>
         </scene>
-        <!--Support-->
+        <!--Settings-->
         <scene sceneID="od9-hz-Gsl">
             <objects>
                 <viewController id="Roc-dD-09a" customClass="SupportViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,27 +35,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="54n-VB-dZV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Support" image="support" id="Opd-LD-YoG"/>
+                    <navigationItem key="navigationItem" title="Settings" id="yIh-4r-t7F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rY7-Bc-2AN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="-252"/>
+            <point key="canvasLocation" x="4322.3999999999996" y="-252.32383808095955"/>
         </scene>
         <!--News-->
         <scene sceneID="gN2-B4-Xhz">
             <objects>
                 <viewController id="cEs-uf-7NZ" customClass="NewsViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u54-3T-8e5" customClass="news">
+                    <view key="view" contentMode="scaleToFill" id="u54-3T-8e5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ifj-Nu-2In"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="news" id="vJI-v0-l6p"/>
+                    <navigationItem key="navigationItem" title="News" id="8ce-hl-RBG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7i-4N-sdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="-595"/>
+            <point key="canvasLocation" x="1441" y="-1000"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ich-XA-9d0">
@@ -67,14 +67,71 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cEs-uf-7NZ" kind="relationship" relationship="viewControllers" id="FJt-7j-Yl5"/>
-                        <segue destination="hT2-GI-uHo" kind="relationship" relationship="viewControllers" id="eVJ-k0-27Q"/>
-                        <segue destination="Roc-dD-09a" kind="relationship" relationship="viewControllers" id="euU-V0-knR"/>
+                        <segue destination="l6y-Hy-RYV" kind="relationship" relationship="viewControllers" id="FJt-7j-Yl5"/>
+                        <segue destination="Af5-qg-hRM" kind="relationship" relationship="viewControllers" id="eVJ-k0-27Q"/>
+                        <segue destination="idn-if-IZO" kind="relationship" relationship="viewControllers" id="euU-V0-knR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siI-Ga-15o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-414" y="-263"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="R5R-Ek-rgY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l6y-Hy-RYV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="news" id="vJI-v0-l6p"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eqt-Zt-FUV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cEs-uf-7NZ" kind="relationship" relationship="rootViewController" id="CxG-fk-cGm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JlY-NE-KMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="-1000"/>
+        </scene>
+        <!--Following-->
+        <scene sceneID="4vZ-ni-EIt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Af5-qg-hRM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Following" image="following" id="pwH-Wn-6mO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lLE-NI-C8N">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hT2-GI-uHo" kind="relationship" relationship="rootViewController" id="s0y-dG-Svm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyu-Lb-Fue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536.79999999999995" y="120.98950524737631"/>
+        </scene>
+        <!--Support-->
+        <scene sceneID="4yM-wO-VJs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="idn-if-IZO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Support" image="support" id="Opd-LD-YoG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2e-CZ-fDe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Roc-dD-09a" kind="relationship" relationship="rootViewController" id="oh5-ke-220"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7d-0Q-EOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3383.1999999999998" y="-252.32383808095955"/>
         </scene>
     </scenes>
     <resources>
