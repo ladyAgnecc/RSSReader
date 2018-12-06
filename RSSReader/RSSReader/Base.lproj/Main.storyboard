@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vCZ-F4-DXD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Following-->
+        <scene sceneID="1Zd-ot-vlZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="hT2-GI-uHo" customClass="FollowingViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bhh-UB-g33">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mLN-tO-GMO"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Following" image="following" id="pwH-Wn-6mO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Uz-oK-R65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="537" y="121"/>
+        </scene>
+        <!--Support-->
+        <scene sceneID="od9-hz-Gsl">
+            <objects>
+                <viewController id="Roc-dD-09a" customClass="SupportViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="usQ-Ap-diN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="54n-VB-dZV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Support" image="support" id="Opd-LD-YoG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rY7-Bc-2AN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505" y="-252"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="gN2-B4-Xhz">
+            <objects>
+                <viewController id="cEs-uf-7NZ" customClass="NewsViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u54-3T-8e5" customClass="news">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ifj-Nu-2In"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="news" id="vJI-v0-l6p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7i-4N-sdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="-595"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ich-XA-9d0">
+            <objects>
+                <tabBarController id="vCZ-F4-DXD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="05Q-hG-YJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cEs-uf-7NZ" kind="relationship" relationship="viewControllers" id="FJt-7j-Yl5"/>
+                        <segue destination="hT2-GI-uHo" kind="relationship" relationship="viewControllers" id="eVJ-k0-27Q"/>
+                        <segue destination="Roc-dD-09a" kind="relationship" relationship="viewControllers" id="euU-V0-knR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siI-Ga-15o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="-263"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="following" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
+        <image name="support" width="30" height="30"/>
+    </resources>
 </document>
