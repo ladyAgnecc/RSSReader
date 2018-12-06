@@ -8,8 +8,17 @@
 
 import UIKit
 
-class SupportViewController: UIViewController {
-
+class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var settingsTable: UITableView!
+    
+    @IBAction func addServer(_ sender: Any) {
+    
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -11,9 +11,13 @@
 		7B54393221B9852D0007723C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B54393021B9852D0007723C /* Main.storyboard */; };
 		7B54393421B9852E0007723C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B54393321B9852E0007723C /* Assets.xcassets */; };
 		7B54393721B9852E0007723C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B54393521B9852E0007723C /* LaunchScreen.storyboard */; };
-		7B54394321B99C6C0007723C /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54394221B99C6C0007723C /* SupportViewController.swift */; };
 		7B54394521B99CA00007723C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54394421B99CA00007723C /* NewsViewController.swift */; };
 		7B54394721B99CB20007723C /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54394621B99CB20007723C /* FollowingViewController.swift */; };
+		7B54394D21B9A5F40007723C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54394C21B9A5F40007723C /* SettingsViewController.swift */; };
+		7B54395021B9A8790007723C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B54394E21B9A8790007723C /* DataModel.xcdatamodeld */; };
+		7B54395221B9AD150007723C /* ModelSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54395121B9AD150007723C /* ModelSettings.swift */; };
+		7B54395621B9AFAB0007723C /* Server+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54395421B9AFAB0007723C /* Server+CoreDataClass.swift */; };
+		7B54395721B9AFAB0007723C /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54395521B9AFAB0007723C /* Server+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +27,13 @@
 		7B54393321B9852E0007723C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B54393621B9852E0007723C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B54393821B9852E0007723C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B54394221B99C6C0007723C /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		7B54394421B99CA00007723C /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7B54394621B99CB20007723C /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
+		7B54394C21B9A5F40007723C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7B54394F21B9A8790007723C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		7B54395121B9AD150007723C /* ModelSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSettings.swift; sourceTree = "<group>"; };
+		7B54395421B9AFAB0007723C /* Server+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7B54395521B9AFAB0007723C /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +66,14 @@
 		7B54392B21B9852D0007723C /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
-				7B54394821B99DD20007723C /* Flows */,
+				7B54395321B9AF300007723C /* Models */,
 				7B54392C21B9852D0007723C /* AppDelegate.swift */,
+				7B54394821B99DD20007723C /* Flows */,
 				7B54393021B9852D0007723C /* Main.storyboard */,
 				7B54393321B9852E0007723C /* Assets.xcassets */,
 				7B54393521B9852E0007723C /* LaunchScreen.storyboard */,
 				7B54393821B9852E0007723C /* Info.plist */,
+				7B54394E21B9A8790007723C /* DataModel.xcdatamodeld */,
 			);
 			path = RSSReader;
 			sourceTree = "<group>";
@@ -71,9 +81,9 @@
 		7B54394821B99DD20007723C /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				7B54394921B99DDC0007723C /* News */,
 				7B54394B21B99DEA0007723C /* Following */,
 				7B54394A21B99DE30007723C /* Settings */,
-				7B54394921B99DDC0007723C /* News */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -89,7 +99,8 @@
 		7B54394A21B99DE30007723C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				7B54394221B99C6C0007723C /* SupportViewController.swift */,
+				7B54394C21B9A5F40007723C /* SettingsViewController.swift */,
+				7B54395121B9AD150007723C /* ModelSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -100,6 +111,15 @@
 				7B54394621B99CB20007723C /* FollowingViewController.swift */,
 			);
 			path = Following;
+			sourceTree = "<group>";
+		};
+		7B54395321B9AF300007723C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B54395421B9AFAB0007723C /* Server+CoreDataClass.swift */,
+				7B54395521B9AFAB0007723C /* Server+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B54394721B99CB20007723C /* FollowingViewController.swift in Sources */,
+				7B54395021B9A8790007723C /* DataModel.xcdatamodeld in Sources */,
 				7B54394521B99CA00007723C /* NewsViewController.swift in Sources */,
-				7B54394321B99C6C0007723C /* SupportViewController.swift in Sources */,
+				7B54394D21B9A5F40007723C /* SettingsViewController.swift in Sources */,
+				7B54395721B9AFAB0007723C /* Server+CoreDataProperties.swift in Sources */,
+				7B54395621B9AFAB0007723C /* Server+CoreDataClass.swift in Sources */,
+				7B54395221B9AD150007723C /* ModelSettings.swift in Sources */,
 				7B54392D21B9852D0007723C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +400,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7B54394E21B9A8790007723C /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B54394F21B9A8790007723C /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 7B54394F21B9A8790007723C /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B54392121B9852D0007723C /* Project object */;
 }
