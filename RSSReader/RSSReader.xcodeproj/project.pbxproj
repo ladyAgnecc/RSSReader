@@ -18,6 +18,8 @@
 		7B54395221B9AD150007723C /* ModelSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54395121B9AD150007723C /* ModelSettings.swift */; };
 		7B54395621B9AFAB0007723C /* Server+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54395421B9AFAB0007723C /* Server+CoreDataClass.swift */; };
 		7B54395721B9AFAB0007723C /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54395521B9AFAB0007723C /* Server+CoreDataProperties.swift */; };
+		7B99EDD521BAC59C00750F5D /* AddServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99EDD421BAC59C00750F5D /* AddServersViewController.swift */; };
+		7B99EDD721BAC60400750F5D /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99EDD621BAC60400750F5D /* ServerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		7B54395121B9AD150007723C /* ModelSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSettings.swift; sourceTree = "<group>"; };
 		7B54395421B9AFAB0007723C /* Server+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B54395521B9AFAB0007723C /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7B99EDD421BAC59C00750F5D /* AddServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServersViewController.swift; sourceTree = "<group>"; };
+		7B99EDD621BAC60400750F5D /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,8 @@
 		7B54392B21B9852D0007723C /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
-				7B54395321B9AF300007723C /* Models */,
 				7B54392C21B9852D0007723C /* AppDelegate.swift */,
+				7B54395321B9AF300007723C /* Models */,
 				7B54394821B99DD20007723C /* Flows */,
 				7B54393021B9852D0007723C /* Main.storyboard */,
 				7B54393321B9852E0007723C /* Assets.xcassets */,
@@ -99,6 +103,7 @@
 		7B54394A21B99DE30007723C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7B99EDD321BAC56600750F5D /* Add server */,
 				7B54394C21B9A5F40007723C /* SettingsViewController.swift */,
 				7B54395121B9AD150007723C /* ModelSettings.swift */,
 			);
@@ -120,6 +125,15 @@
 				7B54395521B9AFAB0007723C /* Server+CoreDataProperties.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7B99EDD321BAC56600750F5D /* Add server */ = {
+			isa = PBXGroup;
+			children = (
+				7B99EDD421BAC59C00750F5D /* AddServersViewController.swift */,
+				7B99EDD621BAC60400750F5D /* ServerModel.swift */,
+			);
+			path = "Add server";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,8 @@
 			files = (
 				7B54394721B99CB20007723C /* FollowingViewController.swift in Sources */,
 				7B54395021B9A8790007723C /* DataModel.xcdatamodeld in Sources */,
+				7B99EDD721BAC60400750F5D /* ServerModel.swift in Sources */,
+				7B99EDD521BAC59C00750F5D /* AddServersViewController.swift in Sources */,
 				7B54394521B99CA00007723C /* NewsViewController.swift in Sources */,
 				7B54394D21B9A5F40007723C /* SettingsViewController.swift in Sources */,
 				7B54395721B9AFAB0007723C /* Server+CoreDataProperties.swift in Sources */,
